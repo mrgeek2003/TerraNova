@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ngSkipHydration>
+  <head>
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+      .glyphicon{
+        color: white;
+      }
+    </style>
+  </head> 
+  <body>
+    <!-- Image and text -->
+    <nav>
+      <div class="navbar navbar-light bg-danger">
+        <a class="navbar-brand" routerLink="/">
+         TerraNova.com
+        </a>
+        <ul class="navbar-right bg-danger">
+          <li><a routerLink="/">Sign Up</a></li>
+          <li><a routerLink="/">Login</a></li>
+        </ul>
+      </div>
+      <ul>
+        <li><a [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/">Home</a></li>
+        <li><a routerLinkActive="active" routerLink="/buy-property">Buy</a></li>
+        <li><a routerLinkActive="active" routerLink="/rent-property">Rent</a></li>
+        <li><a routerLinkActive="active" routerLink="/add-property">Add Property</a></li>
+        <li><a routerLinkActive="active" routerLink="/list-property">List Property</a></li>
+        <li><a routerLinkActive="active" routerLink="/services">Services</a></li>
+        <li><a routerLinkActive="active" routerLink="/about">About</a></li>
+      </ul>
+    </nav>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
