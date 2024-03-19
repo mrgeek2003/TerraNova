@@ -4,13 +4,14 @@
   <body>  
     <div class="container">
       <div class="shadow p-3 mb-5 bg-white rounded">
-        <a routerLink="/">
+        <a routerLink="/property-details/{{property.propertyID}}">
         <div class="card">
-          <img [src]="property.propertyImage" alt="house" class="img" />
+          <img *ngIf="property.propertyImage" [src]="property.propertyImage" alt="house" class="img" />
+          <img *ngIf="!property.propertyImage" src="/assets/photos/defaultPhoto.png" alt="house" class="img" />
           <div class="details">
               <h1 class="headerFont">{{property.propertyName}}</h1>
-              <h2 class="subFonts">{{property.propertyPriceA}}</h2>
-            </div>
+              <h2 class="subFonts"> CA $ {{property.propertyPriceA}}</h2>
+            </div> 
           </div>
         </a>
       </div>

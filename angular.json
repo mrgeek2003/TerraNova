@@ -33,7 +33,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/photos"            
+              "src/assets/photos",
+              "src/data"            
             ],
             "styles": [
               "src/styles.css"

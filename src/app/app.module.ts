@@ -12,6 +12,21 @@ import { HomeComponent } from './components/home/home.component';
 import { PropertyDetailsComponent } from './components/property-details/property-details.component';
 import { ServicesComponent } from './components/services/services.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HousingServiceService } from './service/housing-service.service';
+import { Routes,RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
+
+const appRoutes:Routes=[
+  {path:'',component:HomeComponent},
+  {path:'buy-property',component:AppListComponent},
+  {path:'rent-property',component:AppListComponent},
+  {path:'list-property',component:AppListComponent},
+  {path:'add-property',component:AddPropComponent},
+  {path:'property-details/:propertyID',component:PropertyDetailsComponent},
+  {path:'**',component:PageNotFoundComponent},
+]
 
 @NgModule({
   declarations: [
@@ -28,9 +43,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [HousingServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

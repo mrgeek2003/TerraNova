@@ -1,0 +1,26 @@
+[
+    {
+    "propertyID": 1,
+    "propertySaleRent":1,
+    "propertyName": "1196 Voyager Street Sudbury Ontario",
+    "propertyImage":"/assets/photos/property1.png",
+    "propertyPrice": 465000,
+    "propertyPriceA": "4,65,000"
+  },
+    {
+    "propertyID": 2,
+    "propertySaleRent":0,
+    "propertyName": "1196 Voyager Street Sudbury Ontario",
+    "propertyImage":"",
+    "propertyPrice": 465000,
+    "propertyPriceA": "4,65,000"
+  },
+    {
+    "propertyID": 3,
+    "propertySaleRent":1,
+    "propertyName": "1196 Voyager Street Sudbury Ontario",
+    "propertyImage":"/assets/photos/property1.png",
+    "propertyPrice": 465000,
+    "propertyPriceA": "4,65,000"
+  }
+]
