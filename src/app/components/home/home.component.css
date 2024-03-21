@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    margin-top: 5%;
+    height: 250vh;
+    width: 300vh;
+    margin-left: 16%;
+    /* align-self: center; */
+    /* align-items: center; */
+}

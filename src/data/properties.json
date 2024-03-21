@@ -1,26 +1,135 @@
 [
-    {
+  {
     "propertyID": 1,
-    "propertySaleRent":1,
-    "propertyName": "1196 Voyager Street Sudbury Ontario",
-    "propertyImage":"/assets/photos/property1.png",
+    "sellRentFlag": 0,
+    "propertyName": "1196 VOYAGER ST",
+    "propertyLocation": "Sudbury Ontario",
+    "propertyCity": "Greater Sudbury Area",
+    "propertyImage": "/assets/photos/Voyager_Street.png",
     "propertyPrice": 465000,
-    "propertyPriceA": "4,65,000"
+    "propertyPriceA": "4,65,000",
+    "propertyStatus": "Sale",
+    "propertyLocationURL":"location"
   },
-    {
+  {
     "propertyID": 2,
-    "propertySaleRent":0,
-    "propertyName": "1196 Voyager Street Sudbury Ontario",
-    "propertyImage":"",
-    "propertyPrice": 465000,
-    "propertyPriceA": "4,65,000"
+    "sellRentFlag": 1,
+    "propertyName": "19 SNOWDON AVE",
+    "propertyLocation": "Sudbury Ontario  P3C1V7",
+    "propertyCity": "Greater Sudbury Area",
+    "propertyImage": "/assets/photos/Snowdon_Avenue.png",
+    "propertyPrice": 1500,
+    "propertyPriceA": "1,500/month",
+    "propertyLocationURL":"location"
   },
-    {
+  {
     "propertyID": 3,
-    "propertySaleRent":1,
-    "propertyName": "1196 Voyager Street Sudbury Ontario",
-    "propertyImage":"/assets/photos/property1.png",
-    "propertyPrice": 465000,
-    "propertyPriceA": "4,65,000"
+    "sellRentFlag": 0,
+    "propertyName": "715 BONIN ST",
+    "propertyLocation": " Azilda, Ontario P0M1B0",
+    "propertyCity": "Greater Sudbury Area",
+    "propertyImage": "/assets/photos/Bonin_Street.png",
+    "propertyPrice": 875715,
+    "propertyPriceA": "8,75,715",
+    "propertyLocationURL":"location"
+  },
+  {
+    "propertyID": 4,
+    "sellRentFlag": 0,
+    "propertyName": "7 SQUIRE DR",
+    "propertyLocation": "Richmond Hill, Ontario L4S1C4",
+    "propertyCity": "Greater Toronto Area",
+    "propertyImage": "/assets/photos/SQUIRE_DR.png",
+    "propertyPrice": 1488888,
+    "propertyPriceA": "14,88,888",
+    "propertyLocationURL":"location"
+  },
+  {
+    "propertyID": 5,
+    "sellRentFlag": 1,
+    "propertyName": "229 AIRDRIE RD",
+    "propertyLocation": "Toronto, Ontario M4G1M9",
+    "propertyCity": "Greater Toronto Area",
+    "propertyImage": "/assets/photos/AIDRIE_STREET.png",
+    "propertyPrice": 2500,
+    "propertyPriceA": "2500/month",
+    "propertyLocationURL":"location"
+  },
+  {
+    "propertyID": 6,
+    "sellRentFlag": 0,
+    "propertyName": "35 WILLETT CRES",
+    "propertyLocation": "Richmond Hill, Ontario L4S1C4",
+    "propertyCity": "Greater Toronto Area",
+    "propertyImage": "/assets/photos/WILLETT_CRES.png",
+    "propertyPrice": 3299888,
+    "propertyPriceA": "32,99,888",
+    "propertyLocationURL":"location"
+  },
+  {
+    "propertyID": 7,
+    "sellRentFlag": 0,
+    "propertyName": "152 KAMLOOPS AVE",
+    "propertyLocation": "Ottawa, Ontario K1V7C9",
+    "propertyCity": "Ottawa-Gatineau Metropolitan Area(Canada's Capital Region)",
+    "propertyImage": "/assets/photos/KAMLOOPS_AVENUE.png",
+    "propertyPrice": 1898000,
+    "propertyPriceA": "1,898,000",
+    "propertyLocationURL":"location"
+  },
+  {
+    "propertyID": 8,
+    "sellRentFlag": 0,
+    "propertyName": "54 RANGE RD",
+    "propertyLocation": "Ottawa, Ontario K1N8J5",
+    "propertyCity": "Ottawa-Gatineau Metropolitan Area(Canada's Capital Region)",
+    "propertyImage": "/assets/photos/RANGE_ROAD.png",
+    "propertyPrice": 3299888,
+    "propertyPriceA": "32,99,888",
+    "propertyLocationURL":"location"
+  },
+  {
+    "propertyID": 9,
+    "sellRentFlag": 0,
+    "propertyName": "47 Rue des Chouettes",
+    "propertyLocation": "Gatineau , Quebec J8R2X1",
+    "propertyCity": "Ottawa-Gatineau Metropolitan Area(Canada's Capital Region)",
+    "propertyImage": "/assets/photos/RANGE_ROAD.png",
+    "propertyPrice": 3299888,
+    "propertyPriceA": "32,99,888",
+    "propertyLocationURL":"location"
+  },
+  {
+    "propertyID": 10,
+    "sellRentFlag": 0,
+    "propertyName": "4400 Av. Montrose",
+    "propertyLocation": "Westmount, Quebec H3Y2B1",
+    "propertyCity": "Greater Montreal Area",
+    "propertyImage": "/assets/photos/Av_Montrose.png",
+    "propertyPrice": 3299888,
+    "propertyPriceA": "32,99,888",
+    "propertyLocationURL":"location"
+  },
+  {
+    "propertyID": 11,
+    "sellRentFlag": 0,
+    "propertyName": "1580 Rue Viel",
+    "propertyLocation": "Montréal (Verdun/Île-des-Soeurs), Quebec H3E1Y4",
+    "propertyCity": "Quebec City",
+    "propertyImage": "/assets/photos/RueVanDyck.png",
+    "propertyPrice": 449000,
+    "propertyPriceA": "4,49,000",
+    "propertyLocationURL":"location"
+  },
+  {
+    "propertyID": 12,
+    "sellRentFlag": 1,
+    "propertyName": "2250 Notra Dam Ave",
+    "propertyLocation": "Montréal (Verdun/Île-des-Soeurs), Quebec H3E1Y4",
+    "propertyCity": "Quebec City",
+    "propertyImage": "/assets/photos/RueViel.png",
+    "propertyPrice": 2350,
+    "propertyPriceA": "2350/month",
+    "propertyLocationURL":"location"
   }
 ]

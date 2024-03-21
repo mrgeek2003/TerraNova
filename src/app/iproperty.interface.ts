@@ -1,6 +1,6 @@
 export interface IProperty {
     propertyID: number
-    propertySaleRent:number
+    sellRentFlag:number
     propertyName: string
     propertyImage:string
     propertyPrice: number

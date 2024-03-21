@@ -8,8 +8,8 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col">
-              <img src="/assets/photos/background.png" alt="House">
+            <div class="col" *ngFor="let property of properties">
+                <app-card [property]="property"></app-card>
             </div>
         </div>
     </div>
