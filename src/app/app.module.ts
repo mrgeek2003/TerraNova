@@ -17,11 +17,21 @@ import { Routes,RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BuyComponent } from './components/buy/buy.component';
 import { RentComponent } from './components/rent/rent.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { UserRegisterComponent } from './user/user-register/user-register.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
+import { TerraBotComponent } from './components/terra-bot/terra-bot.component';
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
+  {path:'user-login',component:UserLoginComponent},
+  {path:'user-register',component:UserRegisterComponent},
   {path:'buy-property',component:BuyComponent},
   {path:'rent-property',component:RentComponent},
+  {path:'about-info',component:AboutComponent},
+  {path:'blogs',component:BlogsComponent},
+  {path:'terra-bot',component:TerraBotComponent},
+  {path:'service',component:ServicesComponent},
   {path:'list-property',component:AppListComponent},
   {path:'add-property',component:AddPropComponent},
   {path:'property-details/:propertyID',component:PropertyDetailsComponent},
@@ -41,13 +51,19 @@ const appRoutes:Routes=[
     ServicesComponent,
     BuyComponent,
     RentComponent,
-    AppListComponent
+    AppListComponent,
+    UserLoginComponent,
+    UserRegisterComponent,
+    BlogsComponent,
+    TerraBotComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [HousingServiceService],
   bootstrap: [AppComponent]

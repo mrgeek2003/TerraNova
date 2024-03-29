@@ -1,17 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div class="container">
+    <link
+      href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="mainCard">
+      <div class="container">
         <div class="row">
-            <div class="col">
-              <img src="/assets/photos/background.png" alt="House">
-            </div>
+          <div class="col">
+            <h1 class="titleText">WELCOME TO TERRA NOVA</h1>
+            <h2 class="secondaryHeader">Your ultimate Real Estate Guide</h2>
+            <h3 class="captions">Your Residence, Our Mission</h3>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+    <div class="options">
+      <div class="item">
+        <a routerLink="/buy-property">
+          <div class="buyRentContainer">
+            <div class="shadow p-3 mb-5 bg-white rounded">
+              <div class="card">
+                <img src="/assets/photos/icons/sale.png" alt="sale" />
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="item">
+        <a routerLink="/rent-property">
+          <div class="buyRentContainer">
+            <div class="shadow p-3 mb-5 bg-white rounded">
+              <div class="card">
+                <img src="/assets/photos/icons/Rent.png" alt="rent" />
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="item">
+        <a routerLink="/terra-bot">
+          <div class="buyRentContainer">
+            <div class="shadow p-3 mb-5 bg-white rounded">
+              <div class="card">
+                <img src="/assets/photos/icons/TerraBot.png" alt="TerraBot" />
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </body>
 </html>

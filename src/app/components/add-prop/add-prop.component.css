@@ -1,0 +1,17 @@
+.card{
+    display: grid;   
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 15%;
+    margin-left: 15%;
+    align-self: center;
+}
+.ng-invalid.ng-touched{
+    border-color: red;
+}
+.ng-valid{
+    border-color: blue;
+}
+.error-block{
+    color: red;
+}

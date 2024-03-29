@@ -9,7 +9,8 @@
     "propertyPrice": 465000,
     "propertyPriceA": "4,65,000",
     "propertyStatus": "Sale",
-    "propertyLocationURL":"location"
+    "propertyLocationURL":"location",
+    "propertyType":"House"
   },
   {
     "propertyID": 2,
@@ -20,7 +21,9 @@
     "propertyImage": "/assets/photos/Snowdon_Avenue.png",
     "propertyPrice": 1500,
     "propertyPriceA": "1,500/month",
-    "propertyLocationURL":"location"
+    "propertyLocationURL":"location",
+    "propertyType":"House"
+
   },
   {
     "propertyID": 3,
@@ -31,7 +34,9 @@
     "propertyImage": "/assets/photos/Bonin_Street.png",
     "propertyPrice": 875715,
     "propertyPriceA": "8,75,715",
-    "propertyLocationURL":"location"
+    "propertyLocationURL":"location",
+    "propertyType":"House"
+
   },
   {
     "propertyID": 4,
@@ -42,7 +47,9 @@
     "propertyImage": "/assets/photos/SQUIRE_DR.png",
     "propertyPrice": 1488888,
     "propertyPriceA": "14,88,888",
-    "propertyLocationURL":"location"
+    "propertyLocationURL":"location",
+    "propertyType":"House"
+
   },
   {
     "propertyID": 5,
@@ -53,7 +60,9 @@
     "propertyImage": "/assets/photos/AIDRIE_STREET.png",
     "propertyPrice": 2500,
     "propertyPriceA": "2500/month",
-    "propertyLocationURL":"location"
+    "propertyLocationURL":"location",
+    "propertyType":"House"
+
   },
   {
     "propertyID": 6,
@@ -64,7 +73,9 @@
     "propertyImage": "/assets/photos/WILLETT_CRES.png",
     "propertyPrice": 3299888,
     "propertyPriceA": "32,99,888",
-    "propertyLocationURL":"location"
+    "propertyLocationURL":"location",
+    "propertyType":"House"
+
   },
   {
     "propertyID": 7,
@@ -75,7 +86,9 @@
     "propertyImage": "/assets/photos/KAMLOOPS_AVENUE.png",
     "propertyPrice": 1898000,
     "propertyPriceA": "1,898,000",
-    "propertyLocationURL":"location"
+    "propertyLocationURL":"location",
+    "propertyType":"House"
+
   },
   {
     "propertyID": 8,
@@ -86,7 +99,9 @@
     "propertyImage": "/assets/photos/RANGE_ROAD.png",
     "propertyPrice": 3299888,
     "propertyPriceA": "32,99,888",
-    "propertyLocationURL":"location"
+    "propertyLocationURL":"location",
+    "propertyType":"House"
+
   },
   {
     "propertyID": 9,
@@ -97,7 +112,9 @@
     "propertyImage": "/assets/photos/RANGE_ROAD.png",
     "propertyPrice": 3299888,
     "propertyPriceA": "32,99,888",
-    "propertyLocationURL":"location"
+    "propertyLocationURL":"location",
+    "propertyType":"House"
+
   },
   {
     "propertyID": 10,
@@ -108,7 +125,9 @@
     "propertyImage": "/assets/photos/Av_Montrose.png",
     "propertyPrice": 3299888,
     "propertyPriceA": "32,99,888",
-    "propertyLocationURL":"location"
+    "propertyLocationURL":"location",
+    "propertyType":"House"
+
   },
   {
     "propertyID": 11,
@@ -119,7 +138,9 @@
     "propertyImage": "/assets/photos/RueVanDyck.png",
     "propertyPrice": 449000,
     "propertyPriceA": "4,49,000",
-    "propertyLocationURL":"location"
+    "propertyLocationURL":"location",
+    "propertyType":"House"
+
   },
   {
     "propertyID": 12,
@@ -130,6 +151,8 @@
     "propertyImage": "/assets/photos/RueViel.png",
     "propertyPrice": 2350,
     "propertyPriceA": "2350/month",
-    "propertyLocationURL":"location"
+    "propertyLocationURL":"location",
+    "propertyType":"House"
+
   }
 ]

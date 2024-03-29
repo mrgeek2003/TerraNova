@@ -1,2 +1,88 @@
-<p>add-prop works!</p>
-<button (click)="onBack()" class="btn btn-primary">Back</button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">Add New Property</div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+          <!--
+                    ->ngForm directive will provide JS object representation of form
+
+                    ->Angular uses required field of HTML as a Validator
+                      if we submit the form without filling required attributes, 
+                      then value of valid in console will be false.
+                    -> [disabled]="!form.valid" disables button until all required values are not filled  
+
+                -->
+          <div class="form-group col-12">
+            <label for="name">Name of Property</label>
+            <input
+              type="text"
+              class="form-control"
+              #propName="ngModel"
+              ngModel
+              name="propertyName"
+              minlength="5"
+              required
+            />
+            <span
+              *ngIf="!propName.valid && propName.touched"
+              class="error-block"
+            >
+              Please add valid name!!!               
+            </span>
+          </div>
+          <div class="form-group col-12">
+            <label for="type">Type of Property</label>
+            <input
+              type="text"
+              class="form-control"
+              #propType="ngModel"
+              ngModel
+              name="propertyType"
+              required
+            />
+            <span
+              *ngIf="!propType.valid && propType.touched"
+              class="error-block"
+            >
+              Please add valid type!!!
+            </span>
+          </div>
+          <div class="form-group col-12">
+            <label for="price">Price</label>
+            <input
+              type="text"
+              class="form-control"
+              #propPrice="ngModel"
+              ngModel
+              name="propertyPrice"
+              required
+            />
+            <span
+              *ngIf="!propPrice.valid && propPrice.touched"
+              class="error-block"
+            >
+              Please add valid price!!!
+            </span>
+          </div>
+          <div class="form-group col-12">
+            <button
+              [disabled]="!form.valid"
+              type="submit"
+              class="btn btn-secondary mr-2"
+            >
+              Save
+            </button>
+            <button type="reset" class="btn btn-secondary">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

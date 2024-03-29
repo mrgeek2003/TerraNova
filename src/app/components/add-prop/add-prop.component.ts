@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,5 +14,11 @@ ngOnInit(): void {
 }
 onBack(){
   this.router.navigate(['/'])
+}
+onSubmit(form:NgForm){
+  
+  alert("Your Form is Submitted!!!")
+  console.log(form)
+  // this.router.navigate(['/'])
 }
 }
