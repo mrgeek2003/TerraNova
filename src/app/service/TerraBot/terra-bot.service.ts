@@ -1,35 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
 @Injectable({
   providedIn: 'root'
 })
 export class TerraBotService {
+  private botEndpoint = 'https://your-botpress-endpoint.com/api/v1/bots/your-bot-id/webchat/messages';
 
-  private apiUrl = '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';
-  constructor(private http:HttpClient) { }
-  sendMessage(message:string):Observable<any>{
-    return this.http.post<any>(this.apiUrl, { message });
+  constructor(private http: HttpClient) {}
+
+  sendMessage(message: string) {
+    const body = {
+      type: 'text',
+      text: message
+    };
+
+    return this.http.post(this.botEndpoint, body);
   }
 }
-/*
-
-// chatbot.service.ts
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class ChatbotService {
-  private apiUrl = 'YOUR_CHATBOT_API_ENDPOINT';
-
-  constructor(private http: HttpClient) { }
-
-  sendMessage(message: string): Observable<any> {
-    return this.http.post<any>(this.apiUrl, { message });
-  }
-}
-*/

@@ -17,11 +17,18 @@ import { Routes,RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BuyComponent } from './components/buy/buy.component';
 import { RentComponent } from './components/rent/rent.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import {ReactiveFormsModule } from '@angular/forms';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
-import { TerraBotComponent } from './components/terra-bot/terra-bot.component';
+import { ChatComponent } from './components/chat/chat.component';
+import { UserServiceService } from './service/user-service.service';
+import { TerraBotService } from './service/TerraBot/terra-bot.service';
+import { AlertifyService } from './service/alertyfy/alertify.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {TabsModule} from 'ngx-bootstrap/tabs'
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
   {path:'user-login',component:UserLoginComponent},
@@ -29,8 +36,8 @@ const appRoutes:Routes=[
   {path:'buy-property',component:BuyComponent},
   {path:'rent-property',component:RentComponent},
   {path:'about-info',component:AboutComponent},
+  {path:'terra-bot',component:ChatComponent},
   {path:'blogs',component:BlogsComponent},
-  {path:'terra-bot',component:TerraBotComponent},
   {path:'service',component:ServicesComponent},
   {path:'list-property',component:AppListComponent},
   {path:'add-property',component:AddPropComponent},
@@ -55,7 +62,7 @@ const appRoutes:Routes=[
     UserLoginComponent,
     UserRegisterComponent,
     BlogsComponent,
-    TerraBotComponent,
+    ChatComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,9 +70,17 @@ const appRoutes:Routes=[
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    BsDropdownModule.forRoot(),
+    TabsModule.forRoot()
   ],
-  providers: [HousingServiceService],
+  providers: [
+    HousingServiceService,
+    UserServiceService,
+    TerraBotService,
+    AlertifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

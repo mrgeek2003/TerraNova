@@ -19,68 +19,79 @@
                     -> [disabled]="!form.valid" disables button until all required values are not filled  
 
                 -->
-          <div class="form-group col-12">
-            <label for="name">Name of Property</label>
-            <input
-              type="text"
-              class="form-control"
-              #propName="ngModel"
-              ngModel
-              name="propertyName"
-              minlength="5"
-              required
-            />
-            <span
-              *ngIf="!propName.valid && propName.touched"
-              class="error-block"
-            >
-              Please add valid name!!!               
-            </span>
+          <div>
+            <div>
+              <tabset>
+                <tab heading="Basic title" id="tab1">
+                  <div class="form-group col-12">
+                    <label for="name">Name of Property</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      #propName="ngModel"
+                      ngModel
+                      name="propertyName"
+                      minlength="5"
+                      required
+                    />
+                    <span
+                      *ngIf="!propName.valid && propName.touched"
+                      class="error-block"
+                    >
+                      Please add valid name!!!
+                    </span>
+                  </div>
+                  <div class="form-group col-12">
+                    <label for="type">Type of Property</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      #propType="ngModel"
+                      ngModel
+                      name="propertyType"
+                      required
+                    />
+                    <span
+                      *ngIf="!propType.valid && propType.touched"
+                      class="error-block"
+                    >
+                      Please add valid type!!!
+                    </span>
+                  </div>
+                  <div class="form-group col-12">
+                    <label for="price">Price</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      #propPrice="ngModel"
+                      ngModel
+                      name="propertyPrice"
+                      required
+                    />
+                    <span
+                      *ngIf="!propPrice.valid && propPrice.touched"
+                      class="error-block"
+                    >
+                      Please add valid price!!!
+                    </span>
+                  </div>
+                  <div class="form-group col-12">
+                    <button
+                      [disabled]="!form.valid"
+                      type="submit"
+                      class="btn btn-secondary mr-2"
+                    >
+                      Save
+                    </button>
+                    <button type="reset" class="btn btn-secondary">Cancel</button>
+                  </div>
+                </tab>
+                <tab heading="Basic Title 1">Basic content 1</tab>
+                <tab heading="Basic Title 2">Basic content 2</tab>
+              </tabset>
+            </div>
           </div>
-          <div class="form-group col-12">
-            <label for="type">Type of Property</label>
-            <input
-              type="text"
-              class="form-control"
-              #propType="ngModel"
-              ngModel
-              name="propertyType"
-              required
-            />
-            <span
-              *ngIf="!propType.valid && propType.touched"
-              class="error-block"
-            >
-              Please add valid type!!!
-            </span>
-          </div>
-          <div class="form-group col-12">
-            <label for="price">Price</label>
-            <input
-              type="text"
-              class="form-control"
-              #propPrice="ngModel"
-              ngModel
-              name="propertyPrice"
-              required
-            />
-            <span
-              *ngIf="!propPrice.valid && propPrice.touched"
-              class="error-block"
-            >
-              Please add valid price!!!
-            </span>
-          </div>
-          <div class="form-group col-12">
-            <button
-              [disabled]="!form.valid"
-              type="submit"
-              class="btn btn-secondary mr-2"
-            >
-              Save
-            </button>
-            <button type="reset" class="btn btn-secondary">Cancel</button>
-          </div>
+         
         </form>
       </div>
     </div>

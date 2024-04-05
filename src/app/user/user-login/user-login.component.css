@@ -1,0 +1,21 @@
+*{margin: 0; padding: 0;}
+.container{
+    display: grid;
+    margin: 10%;
+    box-shadow: inset;
+}
+.ng-invalid.ng-touched{
+    border-color: red;
+}
+.ng-valid{
+    border-color: blue;
+}
+.ng-pristine{
+    border-color: lightblue;
+}
+.ng-dirty{
+    border-color: brown;
+}
+.error-block{
+    color: red;
+}

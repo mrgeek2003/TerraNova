@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TerraBotComponent } from './terra-bot.component';
+import { ChatComponent } from './chat.component';
 
-describe('TerraBotComponent', () => {
-  let component: TerraBotComponent;
-  let fixture: ComponentFixture<TerraBotComponent>;
+describe('ChatComponent', () => {
+  let component: ChatComponent;
+  let fixture: ComponentFixture<ChatComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TerraBotComponent]
+      declarations: [ChatComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(TerraBotComponent);
+    fixture = TestBed.createComponent(ChatComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

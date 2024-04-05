@@ -1,0 +1,13 @@
+<div style="text-align:center">
+    <h1>
+      Welcome to Angular Botpress Integration!
+    </h1>
+  </div>
+  <div>
+    <input type="text" [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="Type your message...">
+    <button (click)="sendMessage()">Send</button>
+  </div>
+  <div *ngIf="botResponse">
+    <p>Bot Response:</p>
+    <p>{{ botResponse }}</p>
+  </div>  

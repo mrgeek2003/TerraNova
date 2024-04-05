@@ -3,8 +3,9 @@ Template-Driven Form: Application logic flows from Template->TS File
 Reactive formL Application logic flows from TS File ->Template
 */
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UserServiceService } from '../../service/user-service.service';
+import { User } from '../../model/user';
 @Component({
   selector: 'app-user-register',
   templateUrl: './user-register.component.html',
@@ -12,23 +13,19 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class UserRegisterComponent implements OnInit {
   registrationForm: FormGroup;
-  constructor() { }
-  ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    this.registrationForm = new FormGroup({
-      username: new FormControl<string>('',[Validators.required]),
-      email: new FormControl(null, [Validators.email, Validators.required]),
-      password: new FormControl(null, [
-        Validators.required,
-        Validators.minLength(8),
-      ]),
-      confirmPassword: new FormControl(null, [Validators.required]),
-      mobileNo: new FormControl(null, [
-        Validators.required,
-        Validators.maxLength(10),
-      ]),
-    });
+  user:User
+  constructor(private formBuilder:FormBuilder,private userService:UserServiceService) { }
+  ngOnInit(): void {    
+    this.createRegistrationForm()
+  }
+  createRegistrationForm(){
+    this.registrationForm=this.formBuilder.group({
+      username:[null,Validators.required],
+      email:[null,[Validators.email, Validators.required]],
+      password:[null,[Validators.required,Validators.minLength(8)]],
+      confirmPassword:[null,[Validators.required]],
+      mobileNo:[null,[Validators.required,Validators.maxLength(10)]]
+    })
   }
   passwordMatcher(fg: FormGroup): boolean {
     if (
@@ -49,8 +46,35 @@ export class UserRegisterComponent implements OnInit {
       return true;
     }
   }
-  onSubmit() {
-    alert('Your form is submitted');
-    console.log(this.registrationForm);
+  
+userData():User{
+  return this.user={
+    userName:this.userName.value,
+    email:this.userEmail.value,
+    password:this.userPassword.value,
+    mobileNo:this.userMobile.value
   }
+}
+get userName(){
+  return this.registrationForm.get('username') as FormControl
+}
+get userEmail(){
+  return this.registrationForm.get('email') as FormControl
+}
+get userPassword(){
+  return this.registrationForm.get('password') as FormControl
+}
+get userMobile(){
+  return this.registrationForm.get('mobile') as FormControl
+}
+
+onSubmit() {
+  alert('Your form is submitted');
+  console.log(this.registrationForm);
+
+  const userValue = this.registrationForm.value; // Get the value of the form
+
+  this.userService.addUser(userValue) // Call addUser with the form value
+}
+
 }

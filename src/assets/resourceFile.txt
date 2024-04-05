@@ -1,1 +1,3 @@
-TerraBot API: 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
+TerraBot OPENAI API: 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 
+BotPress OPENAI API: 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
+TerraBot OPENAI API: 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
