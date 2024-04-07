@@ -35,7 +35,9 @@
               "src/assets",
               "src/assets/photos",
               "src/assets/photos/icons",
-              "src/data"            
+              "src/data",
+              "src/assets/form.css",
+              "src/assets/tabs.css"
             ],
             "styles": [
               "src/styles.css"

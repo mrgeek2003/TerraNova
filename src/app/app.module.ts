@@ -29,6 +29,9 @@ import { AlertifyService } from './service/alertyfy/alertify.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TabsModule} from 'ngx-bootstrap/tabs'
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
   {path:'user-login',component:UserLoginComponent},
@@ -73,7 +76,9 @@ const appRoutes:Routes=[
     ReactiveFormsModule,
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    ButtonsModule.forRoot(),
+    BsDatepickerModule.forRoot(),
   ],
   providers: [
     HousingServiceService,

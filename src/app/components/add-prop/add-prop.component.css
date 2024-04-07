@@ -6,6 +6,12 @@
     margin-left: 15%;
     align-self: center;
 }
+.propertyPreview{
+    margin-bottom: 10%;
+    margin-right: 25%;
+    margin-left: 25%;
+    align-self: center;
+}
 .ng-invalid.ng-touched{
     border-color: red;
 }
@@ -14,4 +20,14 @@
 }
 .error-block{
     color: red;
+}
+.photo-control{
+  min-height: 300px;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px dashed blue;
+  margin: 5px;
+}
+.form-group label {
+    font-weight: bold;
 }

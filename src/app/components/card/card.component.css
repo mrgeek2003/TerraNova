@@ -1,9 +1,9 @@
 .container{
-    height:  29.6vh;
-    width: 29.8vh;
+    height: 35.6vh;
+    width: 35.8vh;
     align-items: center;
     vertical-align: middle; 
-    padding: 1%;
+    padding: 5%;
     border: none; 
   }
   .container:hover{
@@ -16,7 +16,7 @@
     width: 15.625em; */
     align-items: center;
     vertical-align: middle; 
-    padding: 1%;
+    padding: 5%;
     border: none;
   }
   

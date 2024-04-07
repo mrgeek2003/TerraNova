@@ -8,7 +8,7 @@ import { AlertifyService } from '../../service/alertyfy/alertify.service';
 })
 export class NavbarComponent implements OnInit {
   constructor() {}
-  loggedInUsers: string|'John Doe';
+  loggedInUsers: string;
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.

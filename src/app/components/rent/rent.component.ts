@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './rent.component.css'
 })
 export class RentComponent {
-  sellRentFlag=0; 
+  sellRentFlag=1; 
   /* 
   Sell Rent flag depicts weather our property is for sale or for rent
         sellRentFlag=0 ==> Property is for sale (Default)
@@ -19,7 +19,7 @@ export class RentComponent {
   
   ngOnInit(): void {
     if(this.route.snapshot.url.toString()){
-       this.sellRentFlag=1
+       this.sellRentFlag=2
     }
       this.rentServices.getProperties(this.sellRentFlag).subscribe((data) => {
       this.properties = data;

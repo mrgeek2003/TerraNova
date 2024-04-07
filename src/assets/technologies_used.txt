@@ -1,0 +1,6 @@
+FRONTEND:
+1)Angular and Typescript 
+2) Git and GitHub
+3) Bootstrap
+4) Alertify.js 
+5) NGx Bootstrap 

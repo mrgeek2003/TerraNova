@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './buy.component.css'
 })
 export class BuyComponent implements OnInit{
-  sellRentFlag=1; 
+  sellRentFlag=2; 
   /* 
   Sell Rent flag depicts weather our property is for sale or for rent
         sellRentFlag=0 ==> Property is for sale (Default)
@@ -20,7 +20,7 @@ export class BuyComponent implements OnInit{
   
   ngOnInit(): void {
     if(this.route.snapshot.url.toString()){
-       this.sellRentFlag=0
+       this.sellRentFlag=1
     }
       this.buyServices.getProperties(this.sellRentFlag).subscribe((data) => {
       this.properties = data;

@@ -10,7 +10,8 @@
           <img *ngIf="!property.propertyImage" src="/assets/photos/defaultPhoto.png" alt="house" class="img" />
           <div class="details">
               <h1 class="headerFont">{{property.propertyName}}</h1>
-              <h2 class="subFonts"> CA $ {{property.propertyPriceA}}</h2>
+              <h2 class="subFonts"> CA $ {{property.propertyPrice}}</h2>
+              <h2 class="subFonts">{{property.propertyType}}</h2>
             </div> 
           </div>
         </a>
