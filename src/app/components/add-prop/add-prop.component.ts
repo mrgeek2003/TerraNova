@@ -1,10 +1,11 @@
 // Import necessary modules and components from Angular core and ngx-bootstrap
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TabsetComponent } from 'ngx-bootstrap/tabs';
 import { BsDatepickerConfig, BsDatepickerDirective } from 'ngx-bootstrap/datepicker';
 import { IProperty } from '../../iproperty.interface';
+import { Property } from '../../model/property';
 @Component({
   // Component metadata
   selector: 'app-add-prop', // Selector used to embed this component in HTML
@@ -20,12 +21,13 @@ export class AddPropComponent implements OnInit {
   bsInlineValue = new Date();
   bsInlineRangeValue: Date[];
   maxDate = new Date();
- 
+  property=new Property()
   // Constructor to inject dependencies
-  constructor(private router: Router) {
+  constructor(private formBuilder:FormBuilder,private router: Router) {
     this.maxDate.setDate(this.maxDate.getDate() + 7);
     this.bsInlineRangeValue = [this.bsInlineValue, this.maxDate];
   }
+  
   propertyView: IProperty={
     "propertyID": 13,
     "sellRentFlag": 0,

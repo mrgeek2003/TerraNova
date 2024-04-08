@@ -1,4 +1,5 @@
-export interface IProperty {
+import { IProperty } from "../iproperty.interface";
+export class Property implements IProperty{
     propertyID: number
     sellRentFlag:number
     propertyLocation:string
