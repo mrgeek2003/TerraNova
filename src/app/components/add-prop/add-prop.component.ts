@@ -23,7 +23,7 @@ export class AddPropComponent implements OnInit {
   maxDate = new Date();
   property=new Property()
   // Constructor to inject dependencies
-  constructor(private formBuilder:FormBuilder,private router: Router) {
+  constructor(private router: Router) {
     this.maxDate.setDate(this.maxDate.getDate() + 7);
     this.bsInlineRangeValue = [this.bsInlineValue, this.maxDate];
   }
