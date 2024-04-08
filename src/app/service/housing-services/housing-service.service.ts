@@ -3,11 +3,20 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { IProperty } from '../../iproperty.interface';
 import { Observable } from 'rxjs';
+import { Property } from '../../model/property';
+
 @Injectable({
   providedIn: 'root',
 })
 export class HousingServiceService {
   constructor(private http: HttpClient) {}
+  fetchProperty(id: number): Observable<IProperty | undefined> {
+    return this.getProperties().pipe(
+      map(propertiesArray => {
+        return propertiesArray.find(p => p.propertyID === id);
+      })
+    );
+  }
   getProperties(): Observable<IProperty[]> {
     return this.http.get('data/properties.json').pipe(
       map((data) => {

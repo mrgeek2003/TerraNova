@@ -1,8 +1,111 @@
-<p>property-details works!</p>
-<p>Selected Property ID is {{propertyID}}</p>
-<br>
-<button (click)="onSelectNext()" type="button" class="btn btn-primary">=></button>
-<br>
-<button routerLink="/property-details/1" type="button" class="btn btn-primary">1</button>
-<button routerLink="/property-details/2" type="button" class="btn btn-primary">2</button>
-<button routerLink="/property-details/3" type="button" class="btn btn-primary">3</button>
+<div class="row shadow">
+    <div class="col-sm-4 p-0">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img *ngIf="property?.propertyImage" class="card-img-top" [src]="property?.propertyImage">
+          <img *ngIf="!property?.propertyImage" class="card-img-top" src="/assets/images/house_default.png">
+        </div>
+        <div class="card-body">
+          <h1 class="card-title">{{property?.propertyName}}</h1>
+          <div>
+              <strong>{{property?.propertyBHK}} BHK {{property?.propertyType}}  ${{property?.propertyPrice}}</strong>
+          </div>
+          <div>
+             <strong>in {{property?.propertyCity}}</strong>
+          </div> <hr>
+          <div>
+              <strong>Build Area: </strong>
+              {{property?.builtArea}} Sqft
+          </div>
+  
+          <div>
+              <strong>Carpet Area: </strong>
+              {{property?.lotArea}} Sqft
+          </div>
+          <div>
+              <strong>Furnishing Type: </strong>
+              {{property?.propertyFurnishType}}
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="btn-group d-flex">
+            <button class="btn btn-primary">Like</button>
+            <button class="btn btn-success">Message</button>
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-sm-8 p-0">
+      <div class="tab-panel">
+        <tabset class="member-tabset">
+          <tab heading="Overview">
+            <h1>Overview</h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="heading">
+                        <strong>Project Name</strong>
+                        <p>{{property?.propertyName}}</p>
+                    </div>
+  
+                    <div class="heading">
+                        <strong>Floor Number</strong>
+                        <p>{{property?.floors}}</p>
+                    </div>
+  
+                    <div class="heading">
+                        <strong>Age of Property</strong>
+                        <p>{{property?.propertyAGE}}</p>
+                    </div>
+  
+                    <div class="heading">
+                        <strong>Posession</strong>
+                        <p>{{property?.possessionDate}}</p>
+                    </div>
+                </div>
+  
+                <div class="col-sm-6">
+                    <div class="heading">
+                        <strong>Main Entrance</strong>
+                        <p>{{property?.mainEnterance}}</p>
+                    </div>
+  
+                    <div class="heading">
+                        <strong>Gated Community</strong>
+                        <p>{{property?.gatedCommunity}}</p>
+                    </div>
+  
+                    <div class="heading">
+                        <strong>Security Deposit</strong>
+                        <p>{{property?.propertySecurity}}</p>
+                    </div>                    
+                </div>
+                <div class="col-sm-12">
+                    <div class="heading">
+                        <strong>About Property</strong>
+                        <p>{{property?.discription}}</p>
+                    </div>
+                </div>
+              </div>
+          </tab>
+          <tab heading="Address">
+            <div class="col-sm-12">
+              <h1>Address</h1>
+              <div class="heading">
+                  <strong>{{property?.propertyLocation}}</strong><br/>
+                  <strong>{{property?.propertyLandMark}}</strong><br/>
+                  <strong>{{property?.propertyCity}}</strong>
+              </div>
+          </div>
+  
+          </tab>
+          <tab heading="Photos">
+            <h1>Photos</h1>
+          </tab>
+          <tab heading="Contact">
+            <h1>Contact Detail</h1>
+            This should be restricted area and only registered user should be able to see seller contact details
+          </tab>
+        </tabset>
+      </div>
+    </div>
+  </div>
