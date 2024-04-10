@@ -17,8 +17,9 @@ export class HousingServiceService {
       })
     );
   }
+  //data/properties.json
   getProperties(): Observable<IProperty[]> {
-    return this.http.get('data/properties.json').pipe(
+    return this.http.get('http://localhost:3000/api/properties/').pipe(
       map((data) => {
         const propertiesArray: Array<IProperty> = [];
 

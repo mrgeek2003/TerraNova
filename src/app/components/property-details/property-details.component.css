@@ -1,5 +1,6 @@
 .card {
-    min-height: 600px;
+  height: fit-content;
+  width: fit-content;    
   }
   
   .card img {

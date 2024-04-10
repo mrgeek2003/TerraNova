@@ -1,11 +1,14 @@
 // Import necessary modules and components from Angular core and ngx-bootstrap
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TabsetComponent } from 'ngx-bootstrap/tabs';
 import { BsDatepickerConfig, BsDatepickerDirective } from 'ngx-bootstrap/datepicker';
 import { IProperty } from '../../iproperty.interface';
 import { Property } from '../../model/property';
+import { HttpClient } from '@angular/common/http';
+import { AlertifyService } from '../../service/alertyfy/alertify.service';
+
 @Component({
   // Component metadata
   selector: 'app-add-prop', // Selector used to embed this component in HTML
@@ -23,7 +26,7 @@ export class AddPropComponent implements OnInit {
   maxDate = new Date();
   property=new Property()
   // Constructor to inject dependencies
-  constructor(private router: Router) {
+  constructor(private router: Router,private http:HttpClient,private alert:AlertifyService) {
     this.maxDate.setDate(this.maxDate.getDate() + 7);
     this.bsInlineRangeValue = [this.bsInlineValue, this.maxDate];
   }
@@ -96,13 +99,21 @@ export class AddPropComponent implements OnInit {
     Tab3 =>2 etc..
     */
   }
-//For getting details of bedrooms and bathrooms
-
+//  For Storing Data to Database
+storeProperty(property:NgForm){
+  try {       
+    this.http.post<JSON>("http://localhost:3000/api/properties/",property)
+    this.alert.success("Data is Successfully Submitted to Database :)")
+  } catch (error) {
+    this.alert.error("Failed :( ")    
+  }
+}
   // Method to handle form submission
   onSubmit() {
     console.log('Congrats, form Submitted'); // Log success message to console
-    console.log(this.addPropertyForm); // Log form data to console
-    // this.router.navigate(['/']) // Navigate to home page (if needed)
+    // console.log(this.addPropertyForm); // Log form data to console
+    this.storeProperty(this.addPropertyForm)
+    this.router.navigate(['/']) // Navigate to home page (if needed)
   }
   
 }
